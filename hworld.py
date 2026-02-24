@@ -14,3 +14,4 @@ for p in range(1,1001):
     finally:
         s.close()
 print("AÇIK PORTLAR: ", open_ports)
+
