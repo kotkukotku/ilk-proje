@@ -11,4 +11,6 @@ for p in range(1,1001):
         open_ports.append(p)
     except:
         pass
+    finally:
+        s.close()
 print("AÇIK PORTLAR: ", open_ports)
