@@ -16,7 +16,7 @@ Bu projeyi çalıştırmak için aşağıdaki adımları uygulayın:
 1) Bu repoyu klonlayın:
   `git clone https://github.com/kotkukotku/ilk-proje.git`
 2) Klasöre gidin:
-   `cd ilk-projem`
+   `cd ilk-proje`
 3) Kodu çalıştırın:
    `python hworld.py`
 ## Önemli Not
