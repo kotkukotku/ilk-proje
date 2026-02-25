@@ -23,3 +23,7 @@ Bu projeyi çalıştırmak için aşağıdaki adımları uygulayın:
 Lütfen kendi izinli cihazlarınızda yasal olarak kullanın.
 ## İletişim
 Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresine email atabilirsiniz.
+## Güncellemeler
+- Threading eklendi.
+- Timeout ayarı düzeltildi.
+- Açık portlar sırayla listelendi.
