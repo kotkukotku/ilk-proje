@@ -27,3 +27,6 @@ Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresi
 - Threading eklendi.
 - Timeout ayarı düzeltildi.
 - Açık portlar sırayla listelendi.
+## Güncellemeler(2.0)
+- ThreadPoolExecutor eklendi.
+- Timeout ayarı kullanıcı girecek şekilde yapıldı.
