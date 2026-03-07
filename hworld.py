@@ -32,7 +32,7 @@ def banner_grab(sock,ip,p):
         except:
             print("Banner bulunamadı.")
     if p == 80:
-        request = f"HEAD / HTTP/1.1\r\nHost:{ip}Connection: close\r\n\r\n"
+        request = f"HEAD / HTTP/1.1\r\nHost:{ip}\r\nConnection: close\r\n\r\n"
         sock.send(request.encode())
         try:
             response = sock.recv(4096).decode(errors="ignore").strip()
