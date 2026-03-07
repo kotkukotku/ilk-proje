@@ -20,7 +20,7 @@ Bu projeyi çalıştırmak için aşağıdaki adımları uygulayın:
 3) Kodu çalıştırın:
    `python hworld.py`
 ## Önemli Not
-Lütfen kendi izinli cihazlarınızda yasal olarak kullanın.
+Bu proje eğitim amaçlıdır. Lütfen kendi izinli cihazlarınızda yasal olarak kullanın.
 ## İletişim
 Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresine email atabilirsiniz.
 ## Güncellemeler
@@ -30,3 +30,4 @@ Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresi
 ## Güncellemeler(2.0)
 - ThreadPoolExecutor eklendi.
 - Timeout ayarı kullanıcı girecek şekilde yapıldı.
+- Açık portların servisleri bir sözlükle tanımlandı.
