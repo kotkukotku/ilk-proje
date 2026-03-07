@@ -17,12 +17,30 @@ def port_scan(ip,p):
             s.connect((ip,p))
             print(f"{p} AÇIK!")
             open_ports.append(p)
+            banner_grab(s,ip,p) # I've done banner grabbing. 😊😊
         except (TimeoutError, ConnectionRefusedError):
             pass
         except Exception as e:
             print("Hata: ", e)
         finally:
             s.close()
+def banner_grab(sock,ip,p):
+    if p == 21 or p == 22:
+        try:
+            banner = sock.recv(1024).decode(errors="ignore").strip()
+            print(f"Banner: {banner}")
+        except:
+            print("Banner bulunamadı.")
+    if p == 80:
+        request = f"HEAD / HTTP/1.1\r\nHost:{ip}Connection: close\r\n\r\n"
+        sock.send(request.encode())
+        try:
+            response = sock.recv(4096).decode(errors="ignore").strip()
+            for line in response.split("\r\n"):
+                if "Server" in line:
+                    print(line)
+        except:
+            print("Banner bulunamadı.")
 while True:
     ip = input("IP adresini giriniz: ")
     timeout = float(input("Timeout'ı giriniz(Varsayılan 1): ")) # User enters timeout number
