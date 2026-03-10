@@ -2,6 +2,9 @@
 # I created this code with AI helping.
 import socket
 from concurrent.futures import ThreadPoolExecutor
+from threading import Lock
+from time import time
+lock = Lock() # I've added Lock object
 port_degerler = {21: "FTP",
                  22: "SSH",
                  23: "Telnet",
@@ -16,7 +19,8 @@ def port_scan(ip,p):
         try:
             s.connect((ip,p))
             print(f"{p} AÇIK!")
-            open_ports.append(p)
+            with lock:
+                open_ports.append(p)
             banner_grab(s,ip,p) # I've done banner grabbing. 😊😊
         except (TimeoutError, ConnectionRefusedError):
             pass
@@ -42,11 +46,17 @@ def banner_grab(sock,ip,p):
         except:
             print("Banner bulunamadı.")
 while True:
-    ip = input("IP adresini giriniz: ")
-    timeout = float(input("Timeout'ı giriniz(Varsayılan 1): ")) # User enters timeout number
-    baslangic_port = int(input("Başlangıç portunu giriniz(minimum: 1):")) # I've added user input for start port
-    son_port = int(input("Bitiş portunu giriniz(maximum: 65535):")) # Also I've added user input for end port
+    try:
+        ip = input("IP adresini giriniz: ")
+        timeout = float(input("Timeout'ı giriniz(Varsayılan 1): ")) # User enters timeout number
+        baslangic_port = int(input("Başlangıç portunu giriniz(minimum: 1):")) # I've added user input for start port
+        son_port = int(input("Bitiş portunu giriniz(maximum: 65535):")) # Also I've added user input for end port
+    except ValueError:
+        print("Lütfen tam sayı ya da ondalık sayı girin.\n")
+        continue
+    
     if timeout > 0 and baslangic_port > 0 and son_port > 0 and son_port < 65536:
+        baslangic = time() # I've added time measurement
          # I've added ThreadPoolExecutor
         with ThreadPoolExecutor(max_workers=50) as executor:
             for p in range(baslangic_port, son_port+1):
@@ -55,7 +65,8 @@ while True:
     else:
         print("Değerleri girerken hata yaptınız. Lütfen baştan giriniz.")
         continue
-
+bitis = time()
+print(f"Toplam süre: {round(bitis-baslangic)} saniye.\n")
 siralanmis = sorted(open_ports)  # I've sorted all ports at one valueable
 print("AÇIK PORTLAR: ", siralanmis) 
 with open("scan_results.txt","w",encoding="utf-8") as file: # I'm writing .txt file. 😃
