@@ -58,8 +58,10 @@ while True:
 
 siralanmis = sorted(open_ports)  # I've sorted all ports at one valueable
 print("AÇIK PORTLAR: ", siralanmis) 
-for port in siralanmis:
-    for k, v in port_degerler.items():
-        if port == k:
-            print(f"Port: {k}\nServis: {v}\n")
+with open("scan_results.txt","w",encoding="utf-8") as file: # I'm writing .txt file. 😃
+    for port in siralanmis:
+        servis = port_degerler.get(port, "Bilinmeyen Değer") # I've made simply this list
+        if servis:
+            print(f"Port: {port} --- Servis: {servis}")
+            file.write(f"Port: {port}\nServis: {servis}\n\n")
 open_ports.clear()

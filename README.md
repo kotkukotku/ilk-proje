@@ -32,3 +32,5 @@ Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresi
 - Timeout ayarı kullanıcı girecek şekilde yapıldı.
 - Açık portların servisleri bir sözlükle tanımlandı.
 - Banner grabbing eklendi.
+
+- Txt dosyasına yazdırma eklendi.
