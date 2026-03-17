@@ -35,3 +35,5 @@ Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresi
 
 - Txt dosyasına yazdırma eklendi.
 - Süre ölçümü ve thread çakışmasını önlemek için Lock eklendi.
+
+![alt text](image.png)
