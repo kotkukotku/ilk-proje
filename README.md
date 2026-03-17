@@ -1,39 +1,41 @@
-# İlk Python Projem: Port Tarayıcı
+# PyScanner: Multithreaded Network Port Scanner
 
-Bu benim Github'daki ilk repom. Bu projeyi de Git ve Github'ın mantığını anlamak için oluşturdum.
+A high-performance port scanner developed in Python to understand the fundamentals of socket programming, multithreading, and network reconnaissance.
 
-## Açıklama
-Bu proje 1 ile 1000 arasındaki tüm portların açık olup olmadığını kontrol eden basit bir port tarayıcıdır.
+## 🌟 Key Features
+* **Fast Scanning:** Implements `ThreadPoolExecutor` for efficient multithreaded performance.
+* **Service Identification:** Built-in dictionary to resolve common port services.
+* **Banner Grabbing:** Captures service banners to identify software versions.
+* **Thread-Safe Logging:** Uses `threading.Lock` to ensure clean console output and prevent race abandoned data.
+* **Reporting:** Automatically exports scan results to a `.txt` file for further analysis.
+* **Customizable:** User-defined timeouts and target IP ranges.
 
-## Özellikler
-- Python'un socket modülüyle portun açık olup olmadığını kontrol edebilir.
-- Açık portları liste halinde gösterebilir.
-- Girilen herhangi bir IP adresine tarama yapabilir.
+## 🛠️ Installation & Setup
 
-## Kurulum
-Bu projeyi çalıştırmak için aşağıdaki adımları uygulayın:
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/kotkukotku/ilk-proje.git](https://github.com/kotkukotku/ilk-proje.git)
+   cd ilk-proje
 
-1) Bu repoyu klonlayın:
-  `git clone https://github.com/kotkukotku/ilk-proje.git`
-2) Klasöre gidin:
-   `cd ilk-proje`
-3) Kodu çalıştırın:
-   `python hworld.py`
-## Önemli Not
-Bu proje eğitim amaçlıdır. Lütfen kendi izinli cihazlarınızda yasal olarak kullanın.
-## İletişim
-Repoyla ilgili Github hesabımdan bana ulaşabilir ve profilimdeki eposta adresine email atabilirsiniz.
-## Güncellemeler
-- Threading eklendi.
-- Timeout ayarı düzeltildi.
-- Açık portlar sırayla listelendi.
-## Güncellemeler(2.0)
-- ThreadPoolExecutor eklendi.
-- Timeout ayarı kullanıcı girecek şekilde yapıldı.
-- Açık portların servisleri bir sözlükle tanımlandı.
-- Banner grabbing eklendi.
+2. **Run the Scanner:**
+   ```
+   python hworld.py
 
-- Txt dosyasına yazdırma eklendi.
-- Süre ölçümü ve thread çakışmasını önlemek için Lock eklendi.
+## 📈 Roadmap / Version History
 
-![alt text](image.png)
+- **v1.0:** Basic socket connection and IP scanning.
+
+- **v1.5:** Added manual threading and sequential listing.
+
+- **v2.0 (Latest):** Transitioned to ThreadPoolExecutor for better resource management.
+
+- Implemented Banner Grabbing & Service Detection.
+
+- Added file logging and execution time measurement.
+
+## ⚖️ Legal Disclaimer
+This tool is strictly for educational purposes and authorized security testing. The developer is not responsible for any misuse or damage caused by this tool. Always obtain permission before scanning any network.
+
+## 🤝 Contact & Contributions
+
+Feel free to open an issue or submit a pull request if you have suggestions for improvement.
