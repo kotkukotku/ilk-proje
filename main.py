@@ -1,5 +1,5 @@
 # Use this code for educational purposes, please!
-# I created this code with AI helping.
+
 import socket
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
