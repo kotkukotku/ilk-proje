@@ -7,8 +7,8 @@ I created a **port scanner**. This code uses a socket module to scan the port ra
 1. Clone the repository.
 
 ```bash
-   git clone https://github.com/kotkukotku/ilk-proje.git
-   cd ilk-proje
+git clone https://github.com/kotkukotku/ilk-proje.git
+cd ilk-proje
 ```
 2. Run the code.
 
