@@ -1,43 +1,43 @@
-# PyScanner: Multithreaded Network Port Scanner
+# Port Scanner v1
 
-A high-performance port scanner developed in Python to understand the fundamentals of socket programming, multithreading, and network reconnaissance.
+I created a **port scanner**. This code uses a socket module to scan the port range and target IP address input by the user, employing multithreading. It then records the open ports in a list, indicating which service the port belongs to. Instructions for downloading and using it are below:
 
-## 🌟 Key Features
-* **Fast Scanning:** Implements `ThreadPoolExecutor` for efficient multithreaded performance.
-* **Service Identification:** Built-in dictionary to resolve common port services.
-* **Banner Grabbing:** Captures service banners to identify software versions.
-* **Thread-Safe Logging:** Uses `threading.Lock` to ensure clean console output and prevent race abandoned data.
-* **Reporting:** Automatically exports scan results to a `.txt` file for further analysis.
-* **Customizable:** User-defined timeouts and target IP ranges.
+## Installation
 
-## 🛠️ Installation & Setup
+1. Clone the repository.
 
-1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/kotkukotku/ilk-proje.git](https://github.com/kotkukotku/ilk-proje.git)
+```bash
+   git clone https://github.com/kotkukotku/ilk-proje.git
    cd ilk-proje
+```
+2. Run the code.
 
-2. **Run the Scanner:**
-   ```
-   python hworld.py
+```
+python main.py
+```
 
-## 📈 Roadmap / Version History
+## Features
 
-- **v1.0:** Basic socket connection and IP scanning.
+- The port range and IP address are obtained from the user.
 
-- **v1.5:** Added manual threading and sequential listing.
+- Port scanning is performed using the socket module to find open ports.
 
-- **v2.0 (Latest):** Transitioned to ThreadPoolExecutor for better resource management.
+- Multithreading is present during port scanning.
 
-- Implemented Banner Grabbing & Service Detection.
+- It's trying to retrieve banners for open ports.
 
-- Added file logging and execution time measurement.
+- Open ports are listed, and the services they connect to are shown as output.
 
-## ⚖️ Legal Disclaimer
-This tool is strictly for educational purposes and authorized security testing. The developer is not responsible for any misuse or damage caused by this tool. Always obtain permission before scanning any network.
+## Important Note
 
-## 🤝 Contact & Contributions
+- Please use it for LEGAL purposes.
 
-Feel free to open an issue or submit a pull request if you have suggestions for improvement.
+## Communication and Feedback
+
+If you have any feedback or suggestions, you can reach me on GitHub.
+
+## Example Image
+
+I tried my code in my Raspberry Pi 5. There is how ran on my Pi:
 
 ![alt text](image.png)
